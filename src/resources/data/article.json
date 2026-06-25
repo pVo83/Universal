@@ -1,0 +1,61 @@
+[{
+  "id": "0",
+  "img": "articleList1",
+  "sub": "<span class=dodger>Flights</span>",
+  "title": "Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines",
+  "desc": "Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights.",
+  "date": "Aug 6",
+  "comment": "342",
+  "favorite": "830"
+},
+{
+  "id": "1",
+  "img": "articleList2",
+  "sub": "<span class=pelorous>Food</span>",
+  "title": "Three Courses, 20 Euros: The Affordable Dining Renaissance in Paris",
+  "desc": "The Los Angeles area, for all of its culinary diversity, has not historically been thought of as a haven for bread lovers. The area has a reputation as a place where gluten fears to tread.",
+  "date": "Oct 7",
+  "comment": "27",
+  "favorite": "129"
+},
+{
+  "id": "2",
+  "img": "articleList3",
+  "sub": "<span class=sunset>Science</span>",
+  "title": "Watch the High-Flying Physics of a Plant’s Exploding Fruits",
+  "desc": "Three undergradute physics majors and their professor worked out how the hairyflower wild petunia shoots tiny seeds more than 20 feet through the air",
+  "date": "Oct 11",
+  "comment": "30",
+  "favorite": "284"
+},
+{
+  "id": "3",
+  "img": "articleList4",
+  "sub": "<span class=pelorous>Health</span>",
+  "title": "How the Shape of Your Ears Affects What You Hear",
+  "desc": "We’re able to locate sound because our brains grasp the shape of our ears. When that shape changes, we need time and practice to adapt. Ears are a peculiarly individual piece of anatomy.",
+  "date": "Oct 19",
+  "comment": "102",
+  "favorite": "1,293"
+},
+{
+  "id": "4",
+  "img": "articleList5",
+  "sub": "<span class=sunset>Science</span>",
+  "title": "Forests Protect the Climate. A Future With More Storms Would Mean Trouble.",
+  "desc": "With an increase in extreme weather expected in the years to come, forests could be changed permanently as the world continues to warm",
+  "date": "Oct 22",
+  "comment": "5",
+  "favorite": "82"
+},
+{
+  "id": "5",
+  "img": "articleList6",
+  "sub": "<span class=lavender>Art & Design</span>",
+  "title": "New Contemporary Institute Reverberates in Richmond’s Historic Landscape",
+  "desc": "The center, which will open in April, takes a bold look at race and other social issues that still resonate in the region as well as the nation. A new Institute for Contemporary Art is set to open.",
+  "date": "Oct 26",
+  "comment": "101",
+  "favorite": "432"
+}
+]

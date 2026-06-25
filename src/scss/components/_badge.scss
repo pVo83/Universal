@@ -1,0 +1,30 @@
+.badge {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  z-index: 1;
+
+  &__popular {
+    border-radius: 3px;
+    padding: 5px 12px;
+    height: 25px;
+    font-weight: 900;
+    font-size: var(--fs-12);
+    line-height: 125%;
+    text-align: center;
+    color: var(--neutral-100);
+    background-color: var(--color-emerald);
+  }
+
+  &__hot {
+    border-radius: 3px;
+    padding: 5px 12px;
+    height: 25px;
+    font-weight: 900;
+    font-size: var(--fs-12);
+    line-height: 125%;
+    text-align: center;
+    color: var(--neutral-100);
+    background-color: var(--color-sunset);
+  }
+}

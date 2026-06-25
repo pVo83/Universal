@@ -1,0 +1,82 @@
+@use "../mixins" as *;
+
+.hero {
+  &__list {
+    list-style: none;
+    margin: 0;
+    border-radius: var(--radius);
+    padding: 25px 0;
+    background-color: #30363d;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 0;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 0 25px;
+    width: 100%;
+    scroll-behavior: smooth;
+    gap: 20px;
+    scroll-snap-align: start;
+  }
+
+  &__item:not(:last-child) {
+    border-right: 1px solid var(--neutral-700);
+
+    @include tablet {
+      border-right: none;
+    }
+  }
+
+  &__link {
+    max-width: 150px;
+    font-family: var(--ff-secondary);
+    font-weight: 700;
+    font-size: var(--fs-16);
+    line-height: 1.5;
+    color: var(--neutral-100);
+    transition: opacity var(--trs-35);
+
+    p {
+      /* stylelint-disable-next-line value-no-vendor-prefix */
+      display: -webkit-box;
+      overflow: hidden;
+      margin: 0;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+
+      @include tablet {
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include tablet {
+      max-width: inherit;
+    }
+  }
+
+  &__img {
+    width: 65px;
+    height: 65px;
+  }
+
+  &__item:nth-child(1),
+  &__item:nth-child(3) {
+    border-right: 1px solid var(--neutral-700);
+
+    @include mobile {
+      border-right: none;
+    }
+  }
+}

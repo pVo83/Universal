@@ -1,0 +1,132 @@
+@use "../mixins" as *;
+
+.article {
+  padding: 60px 0;
+
+  &__conteiner {
+    gap: 30px;
+
+    @include mobile {
+      gap: 30px 0;
+    }
+  }
+
+  &__content {
+    grid-column: 9 span;
+    border-radius: var(--radius);
+    padding: 0 25px;
+    background-color: var(--neutral-100);
+
+    @include mobile {
+      grid-column: 12 span;
+    }
+  }
+
+  &__aside {
+    grid-column: 3 span;
+    width: 262px;
+
+    @include mobile {
+      grid-column: 12 span;
+      width: inherit;
+    }
+  }
+}
+
+.recommended {
+  border-radius: var(--radius);
+  background-color: var(--neutral-100);
+
+  &__side {
+    border-bottom: 1px solid var(--neutral-300);
+    padding: 0 25px;
+    height: 60px;
+    font-weight: 900;
+    font-size: var(--fs-14);
+    line-height: 143%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &_bottom {
+      justify-content: center;
+      border-top: 1px solid var(--neutral-300);
+      border-bottom: none;
+      height: 45px;
+      font-weight: 900;
+      font-size: var(--fs-14);
+      letter-spacing: 0.04em;
+      text-transform: inherit;
+      color: var(--neutral-800);
+      transition: opacity var(--trs-35);
+
+      @include hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__list {
+    counter-reset: recommended;
+    padding: 0 25px;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid var(--neutral-300);
+  }
+
+  &__item {
+    position: relative;
+    padding: 17px 0;
+    gap: 0 10px;
+
+    &::after {
+      counter-increment: recommended;
+      content: counter(recommended) "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 70px;
+      color: var(--neutral-800);
+      opacity: 0.08;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__info {
+    gap: 5px 0;
+  }
+
+  &__info-text {
+    display: block;
+    font-weight: 400;
+    font-size: var(--fs-14);
+    line-height: 143%;
+    color: var(--neutral-700);
+  }
+
+  &__info-time {
+    display: block;
+    font-weight: 400;
+    font-size: var(--fs-12);
+    line-height: 125%;
+    color: var(--neutral-600);
+  }
+
+  @include mobile {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,80 @@
+:root {
+  --ff-primary: "Lato", sans-serif;
+  --ff-secondary: "RobotoSlab", sans-serif;
+
+  /* ------------------- */
+  /* content-width       */
+  /* ------------------- */
+  --content-width: 1140px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  /* ------------------- */
+  /* color theme         */
+  /* ------------------- */
+  --neutral-100: #fff;
+  --neutral-200: #edeff0;
+  --neutral-300: #d9d9d9;
+  --neutral-400: #bcbfc2;
+  --neutral-500: #d1e2eb;
+  --neutral-600: #939699;
+  --neutral-700: #4b5157;
+  --neutral-800: #262d33;
+  --neutral-900: #000;
+  --color-chalk: #e7d9ff;
+  --color-botticelli: #d1e2eb;
+  --color-horizon: #55839e;
+  --color-bermuda: #6e99ae;
+  --color-lavender: #ac8ee3;
+  --color-dodger: #4592ff;
+  --color-pelorous: #3bbdc4;
+  --color-emerald: #3dc47e;
+  --color-orange: #ffa34d;
+  --color-sunset: #ff4f52;
+  --color-facebook: #4267b2;
+  --color-twitter: #1da1f2;
+  --color-youtube: #f00;
+  --color-instagram: #262626;
+
+  /* ------------------- */
+  /* font-size           */
+  /* ------------------- */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-20: 1.25rem;
+  --fs-25: 1.5625rem;
+  --fs-30: 1.875rem;
+  --fs-40: 2.5rem;
+
+  /* ------------------- */
+  /* transition          */
+  /* ------------------- */
+  --trs-35: 0.35s ease-in-out;
+  --trs-95: 0.95s ease-in-out;
+
+  /* ------------------- */
+  /* margin              */
+  /* ------------------- */
+  --mrg-50: 3.125rem; // 50px;
+
+  /* ------------------- */
+  /* gap                 */
+  /* ------------------- */
+  --gap: 1.25rem; // 20px;
+
+  /* ------------------- */
+  /* border-radius       */
+  /* ------------------- */
+  --radius: 1.125rem; // 18px;
+
+  /* ------------------- */
+  /* opacity             */
+  /* ------------------- */
+  --opacity: 0.8px;
+
+  /* ------------------- */
+  /* sitings             */
+  /* ------------------- */
+  --header-top-height: 50px;
+}

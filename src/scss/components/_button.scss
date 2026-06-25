@@ -1,0 +1,97 @@
+.btn {
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
+  margin: 0;
+  border: 1px solid var(--color-dodger);
+  border-radius: 10em;
+  padding: 10px 25px;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--neutral-100);
+  background-color: var(--color-dodger);
+  transition: var(--trs-35);
+  cursor: pointer;
+  user-select: none;
+  gap: 0.5rem;
+
+  // Animations
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--primary-color);
+  }
+
+  // .btn.secondary
+  &.secondary {
+    color: var(--neutral-900);
+    background-color: #ccc;
+
+    &:hover,
+    &:active {
+      color: var(--neutral-100);
+      background-color: #333;
+    }
+  }
+
+  // .btn.outline
+  &.outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+
+    &:hover,
+    &:active {
+      border-color: var(--primary-color);
+      color: var(--neutral-100);
+      background-color: var(--primary-color);
+    }
+  }
+
+  // .btn.text
+  &.text {
+    color: var(--neutral-100);
+
+    &:hover,
+    &:active {
+      color: var(--neutral-800);
+    }
+  }
+
+  // sizes button
+  &.sm {
+    padding: 0.625em 1.25em; // 10px 20px;
+    font-size: 0.875em; // 14px;
+  }
+
+  &.lg {
+    padding: 1em 2em; // 16px 32px;
+    font-size: 1.25em; // 20px;
+  }
+
+  &.wide {
+    display: flex;
+    width: 100%;
+
+    >*:not(:first-child) {
+      margin-left: auto;
+    }
+  }
+}
+
+.btn.focus-visible {
+  box-shadow: 0 0 0 3px var(--focus-visible);
+}

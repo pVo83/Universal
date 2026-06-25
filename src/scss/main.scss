@@ -1,0 +1,26 @@
+// Базовые подключения
+@use "vars";
+@use "mixins";
+@use "fonts";
+@use "settings";
+
+// Подключения компонентов
+@use "./components/button";
+@use "./components/hero-list";
+@use "./components/hero__tabs";
+@use "./components/badge";
+@use "./components/autor";
+@use "./components/article-list";
+@use "./components/favorite-slider";
+@use "./components/menu-sections";
+@use "./components/menu-mobile";
+
+// Подключения компонентов страниц
+@use "./components/header";
+@use "./components/hero";
+@use "./components/news";
+@use "./components/banner";
+@use "./components/article";
+@use "./components/block";
+@use "./components/subscribe";
+@use "./components/footer";

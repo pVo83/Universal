@@ -1,0 +1,27 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6" id="play">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.2 5.36873L1.2 0.629859C1.2 0.447305 1.3532 0.299316 1.54218 0.299316C1.60779 0.299316 1.67202 0.317539 1.72722 0.351814L5.54281 2.72125C5.70178 2.81997 5.7478 3.02448 5.64561 3.17804C5.6191 3.21787 5.58404 3.25174 5.54281 3.27734L1.72722 5.64678C1.56825 5.7455 1.35654 5.70104 1.25434 5.54748C1.21886 5.49416 1.2 5.43212 1.2 5.36873Z"></path>
+  </symbol>
+  
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="arrow-right">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 9.99951V10.9995H14V13.9995L18 10.4995L14 6.99951V9.99951H3Z" fill="white"></path>
+  </symbol>
+  
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="comment">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1346 12V15L8.36064 12H2.25C1.42157 12 0.75 11.3284 0.75 10.5V3C0.75 2.17157 1.42157 1.5 2.25 1.5H12.75C13.5784 1.5 14.25 2.17157 14.25 3V10.5C14.25 11.3284 13.5784 12 12.75 12H11.1346Z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="favorite">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8391 2.96033C12.1701 2.2119 11.2807 1.80005 10.3346 1.80005C9.38831 1.80005 8.59423 2.2119 7.925 2.96033L7.49998 3.63921L7.075 2.96033C6.40597 2.2119 5.61164 1.80005 4.66557 1.80005C3.71953 1.80005 2.82982 2.2119 2.16086 2.96033C0.779712 4.50554 0.779712 7.01968 2.16086 8.56429L7.10991 13.3207C7.19083 13.4116 7.29157 13.4672 7.39682 13.4886C7.43211 13.4964 7.46761 13.5 7.50317 13.5C7.64318 13.5 7.78341 13.4403 7.89004 13.3207L12.8391 8.56429C14.2203 7.01968 14.2203 4.50554 12.8391 2.96033Z"></path>
+  </symbol>
+  
+  <!-- <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="bookmark">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1H15C16.1046 1 17 1.89543 17 3V19L10.0949 14L3 19V3C3 1.89543 3.89543 1 5 1Z"></path>
+  </symbol> -->
+  <symbol version="1.1" id="bookmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 20 20">
+    <path d="M3,1h14v18l-6.9-5L3,19V1z"></path>
+  </symbol>
+  
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="images">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6V4C3 3.44772 3.44772 3 4 3H18C18.5523 3 19 3.44772 19 4V14C19 14.5523 18.5523 15 18 15H16V17C16 17.5523 15.5523 18 15 18H1C0.447715 18 0 17.5523 0 17V7C0 6.44772 0.447715 6 1 6H3ZM15 15H4C3.44772 15 3 14.5523 3 14V7H1V17H15V15ZM4 4V14H18V4H4ZM18 14H4V13L7 10L10 12L14 8L18 13V14ZM9.5 9C8.67157 9 8 8.32843 8 7.5C8 6.67157 8.67157 6 9.5 6C10.3284 6 11 6.67157 11 7.5C11 8.32843 10.3284 9 9.5 9Z" fill="white"></path>
+  </symbol>
+</svg>

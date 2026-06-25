@@ -1,0 +1,78 @@
+<section class="article">
+  <div class="container | article__conteiner | grid">
+    <div class="article__content">
+      @loop('components/article-list.html', 'resources/data/article.json')
+    </div>
+    <aside class="article__aside">
+      <div class="recommended">
+        <span class="recommended__side | flex-center">Recommended for you</span>
+        <ul class="recommended__list | list-reset">
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended1.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Office Meetings Leave the Office</span>
+              <span class="recommended__info-time">15 minuts ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended2.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Experimental Vocal Music in Brooklyn</span>
+              <span class="recommended__info-time">32 minuts ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended3.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Google’s Influence Over Think Tanks</span>
+              <span class="recommended__info-time">38 minuts ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended4.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Homes for Sale in NYC and Connecticut</span>
+              <span class="recommended__info-time">53 minuts ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended5.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Are You There, Dad? It’s Me, Alice</span>
+              <span class="recommended__info-time">1 hour ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended6.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">The New Punk Look: Lacy and Colorful</span>
+              <span class="recommended__info-time">1 hour ago</span>
+            </div>
+          </li>
+          <li class="recommended__item | flex-center">
+            <a href="#!" class="recommended__link"></a>
+            <img class="recommended__img" loading="lazy" src="img/recommended-img/recommended7.jpg" width="60"
+              height="60" alt="img">
+            <div class="recommended__info | flex-col">
+              <span class="recommended__info-text">Sunday Best in Harlem and Brooklyn</span>
+              <span class="recommended__info-time">2 hours ago</span>
+            </div>
+          </li>
+        </ul>
+        <a class="recommended__side | recommended__side_bottom | flex-center" href="#!">Read more</a>
+      </div>
+    </aside>
+  </div>
+</section>
