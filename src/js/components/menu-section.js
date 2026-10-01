@@ -1,15 +1,19 @@
 const burgerSections = document.getElementById("burger-sections");
 const menuSections = document.getElementById("menu-sections");
 
+const setSectionsMenuState = (isOpen) => {
+  menuSections.classList.toggle("menu-sections_active", isOpen);
+  burgerSections.setAttribute("aria-expanded", String(isOpen));
+  burgerSections.setAttribute("aria-label", isOpen ? "Close sections menu" : "Open sections menu");
+};
+
 burgerSections.addEventListener("click", () => {
-  menuSections.classList.toggle("menu-sections_active");
+  const isOpen = !menuSections.classList.contains("menu-sections_active");
+  setSectionsMenuState(isOpen);
 });
 
-// Добавляем слушатель событий на изменение размера окна
 window.addEventListener("resize", () => {
-  // Проверяем ширину окна
   if (window.innerWidth <= 1024) {
-    // Убираем активный класс, если окно меньше или равно 1024px
-    menuSections.classList.remove("menu-sections_active");
+    setSectionsMenuState(false);
   }
 });

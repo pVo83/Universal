@@ -38,6 +38,8 @@
     top: 5px;
     flex-shrink: 0;
     margin-left: auto;
+    text-decoration: none;
+    color: inherit;
     gap: 10px;
 
     img {
@@ -70,6 +72,8 @@
   &__sign-in {
     flex-shrink: 0;
     margin-left: 60px;
+    text-decoration: none;
+    color: inherit;
     gap: 10px;
 
     @include small-tablet {
@@ -175,6 +179,8 @@
   z-index: 2;
   border-right: 1px solid var(--neutral-300);
   padding: 0 25px 0 0;
+  font: inherit;
+  color: inherit;
   cursor: pointer;
 
   &__text {
@@ -270,6 +276,8 @@
   padding-right: 25px;
   width: 35px;
   height: 50px;
+  font: inherit;
+  color: inherit;
   background-color: transparent;
 
   &__line {

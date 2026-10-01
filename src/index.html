@@ -4,9 +4,10 @@
 @include('partials/head.html')
 
 <body class="page__body">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="site-container">
     @include('partials/header.html')
-    <main class="main">
+    <main id="main-content" class="main">
       @include('partials/layout/hero.html')
       @include('partials/layout/news.html')
       @include('partials/layout/banner.html')
