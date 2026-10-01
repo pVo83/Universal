@@ -1,6 +1,7 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Universal — News Magazine Layout",
+  "short_name": "Universal",
+  "description": "Adaptive news magazine layout portfolio project",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
