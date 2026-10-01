@@ -1,57 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Получаем все кнопки для открытия модального окна
+document.addEventListener("DOMContentLoaded", () => {
   const openModalBtns = document.querySelectorAll(".openModalBtn");
-  // Получаем все модальные окна с видео
-  const videoModals = document.querySelectorAll(".videoModal");
-  // Получаем кнопку для закрытия модального окна
+  const videoModal = document.querySelector(".videoModal");
   const closeModalBtn = document.getElementById("closeModalBtn");
-  // Получаем все элементы с видео-плеерами
-  const videoPlayers = document.querySelectorAll(".videoPlayer");
-  // Получаем элемент body для блокировки/разблокировки прокрутки
-  const body = document.body;
+  const videoPlayer = document.querySelector(".videoPlayer");
 
-  // Функция для блокировки прокрутки
-  function disableScroll() {
-    body.style.overflow = "hidden";
+  if (!videoModal || !closeModalBtn || !videoPlayer) {
+    return;
   }
 
-  // Функция для разблокировки прокрутки
-  function enableScroll() {
-    body.style.overflow = "";
-  }
+  let lastFocusedElement = null;
 
-  // Добавляем обработчик события для каждой кнопки открытия модального окна
-  openModalBtns.forEach(function (openModalBtn) {
-    openModalBtn.addEventListener("click", function () {
-      // При клике на кнопку отображаем все модальные окна и блокируем прокрутку
-      videoModals.forEach(function (videoModal) {
-        videoModal.style.display = "block";
-        disableScroll();
-      });
-    });
+  const openModal = () => {
+    lastFocusedElement = document.activeElement;
+    videoModal.classList.add("is-open");
+    videoModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("stop-scroll");
+    closeModalBtn.focus();
+  };
+
+  const closeModal = () => {
+    videoModal.classList.remove("is-open");
+    videoModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("stop-scroll");
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  };
+
+  openModalBtns.forEach((openModalBtn) => {
+    openModalBtn.addEventListener("click", openModal);
   });
 
-  // Добавляем обработчик события для кнопки закрытия модального окна
-  closeModalBtn.addEventListener("click", function () {
-    // При закрытии модального окна скрываем его, разблокируем прокрутку и останавливаем видео
-    videoModals.forEach(function (videoModal, index) {
-      videoModal.style.display = "none";
-      enableScroll();
-      videoPlayers[index].pause();
-      videoPlayers[index].currentTime = 0;
-    });
+  closeModalBtn.addEventListener("click", closeModal);
+
+  videoModal.addEventListener("click", (event) => {
+    if (event.target === videoModal) {
+      closeModal();
+    }
   });
 
-  // Добавляем обработчик события для клика по области вне модального окна
-  window.addEventListener("click", function (event) {
-    videoModals.forEach(function (videoModal, index) {
-      // Если клик произошел вне модального окна, то скрываем его, разблокируем прокрутку и останавливаем видео
-      if (event.target === videoModal) {
-        videoModal.style.display = "none";
-        enableScroll();
-        videoPlayers[index].pause();
-        videoPlayers[index].currentTime = 0;
-      }
-    });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && videoModal.classList.contains("is-open")) {
+      closeModal();
+    }
   });
 });

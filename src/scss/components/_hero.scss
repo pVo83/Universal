@@ -36,6 +36,10 @@
   transform: translate(-50%, -50%);
   -webkit-backdrop-filter: saturate(100%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+
+  &.is-open {
+    display: block;
+  }
 }
 
 .modal-content {
@@ -65,11 +69,19 @@ video {
 
 .close {
   position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   font-weight: 700;
   font-size: 28px;
-  color: #fff;
+  line-height: 1;
+  color: var(--neutral-100);
+  background-color: #0006;
   cursor: pointer;
 }

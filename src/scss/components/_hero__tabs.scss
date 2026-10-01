@@ -80,7 +80,6 @@
 
   &_tab1 {
     position: relative;
-    display: flex;
     width: 100%;
     min-height: 570px;
     background: url("../img/tab-content1.jpg") no-repeat center center;
@@ -216,6 +215,10 @@
     max-width: 598px;
     color: var(--neutral-100);
     transition: transform var(--trs-95), opacity var(--trs-95);
+  }
+
+  &.is-active {
+    display: flex;
   }
 }
 

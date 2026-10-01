@@ -1,83 +1,96 @@
-// Ждем, пока загрузится весь HTML документ
-document.addEventListener("DOMContentLoaded", function () {
-  // Получаем ссылку на контейнер с содержимым табов
+document.addEventListener("DOMContentLoaded", () => {
   const tabsContentContainer = document.querySelector(".hero__tabs-content");
-
-  // Получаем все элементы содержимого табов
-  const tabContents = tabsContentContainer.querySelectorAll(".tab-content");
-
-  // Получаем ссылку на список табов
   const tabsList = document.querySelector(".hero__tabs-list");
 
-  // Получаем все элементы табов в списке
-  const tabs = tabsList.querySelectorAll(".tab");
+  if (!tabsContentContainer || !tabsList) {
+    return;
+  }
 
-  // Добавляем обработчик события "клик" на список табов
-  tabsList.addEventListener("click", function (event) {
-    // Получаем ближайший таб, на который был произведен клик
-    const clickedTab = event.target.closest(".tab");
+  const tabContents = tabsContentContainer.querySelectorAll(".tab-content");
+  const tabs = tabsList.querySelectorAll('[role="tab"]');
 
-    // Если таб найден, обрабатываем его
-    if (clickedTab) {
-      // Получаем индекс таба в списке
-      const tabIndex = Array.from(clickedTab.parentElement.children).indexOf(clickedTab);
+  const handleTabs = (index) => {
+    tabContents.forEach((tabContent) => {
+      const isActive = tabContent === tabContents[index];
+      tabContent.classList.toggle("is-active", isActive);
+      tabContent.toggleAttribute("hidden", !isActive);
+    });
 
-      // Вызываем функцию для обработки табов с передачей индекса
-      handleTabs(tabIndex);
+    const selectedTabContent = tabContents[index];
+
+    if (selectedTabContent) {
+      const animatedElements = [
+        selectedTabContent.querySelector(".tab-content__subtitle"),
+        selectedTabContent.querySelector(".tab-content__title"),
+        selectedTabContent.querySelector(".post"),
+      ];
+
+      animatedElements.forEach((element) => element?.classList.add("active"));
+
+      setTimeout(() => {
+        animatedElements.forEach((element) => element?.classList.remove("active"));
+      }, 0);
     }
+
+    tabs.forEach((tab, tabIndex) => {
+      const isSelected = tabIndex === index;
+      tab.classList.toggle("active", isSelected);
+      tab.setAttribute("aria-selected", String(isSelected));
+      tab.setAttribute("tabindex", isSelected ? "0" : "-1");
+    });
+  };
+
+  tabsList.addEventListener("click", (event) => {
+    const clickedTab = event.target.closest('[role="tab"]');
+
+    if (!clickedTab || event.target.closest("a")) {
+      return;
+    }
+
+    handleTabs([...tabs].indexOf(clickedTab));
   });
 
-  // Функция для обработки табов по переданному индексу
-  function handleTabs(index) {
-    // Скрываем все элементы содержимого табов
-    tabContents.forEach((tabContent) => {
-      tabContent.style.display = "none";
-    });
+  tabsList.addEventListener("keydown", (event) => {
+    const currentTab = event.target.closest('[role="tab"]');
 
-    // Получаем выбранный элемент содержимого таба
-    const selectedTabContent = tabsContentContainer.querySelector(`.tab-content_tab${index + 1}`);
-
-    // Если элемент содержимого найден
-    if (selectedTabContent) {
-      // Функция для добавления или удаления класса active
-      const addRemoveActiveClass = (element, action) => {
-        element.classList[action]("active");
-      };
-
-      // Добавляем класс active для активации анимации
-      addRemoveActiveClass(selectedTabContent.querySelector('.tab-content__subtitle'), 'add');
-      addRemoveActiveClass(selectedTabContent.querySelector('.tab-content__title'), 'add');
-      addRemoveActiveClass(selectedTabContent.querySelector('.post'), 'add');
-
-      // Задержка для перезапуска анимации
-      setTimeout(() => {
-        addRemoveActiveClass(selectedTabContent.querySelector('.tab-content__subtitle'), 'remove');
-        addRemoveActiveClass(selectedTabContent.querySelector('.tab-content__title'), 'remove');
-        addRemoveActiveClass(selectedTabContent.querySelector('.post'), 'remove');
-      }, 0);
-
-      // Отображаем выбранный элемент содержимого
-      selectedTabContent.style.display = "flex";
+    if (!currentTab) {
+      return;
     }
 
-    // Убираем класс active у всех элементов табов в списке
-    tabs.forEach((tab) => {
-      tab.classList.remove("active");
-    });
+    const currentIndex = [...tabs].indexOf(currentTab);
+    let nextIndex = currentIndex;
 
-    // Добавляем класс active выбранному табу в списке
-    const selectedTab = tabsList.querySelector(`.tab_list${index + 1}`);
-    if (selectedTab) {
-      selectedTab.classList.add("active");
+    switch (event.key) {
+      case "ArrowDown":
+      case "ArrowRight":
+        event.preventDefault();
+        nextIndex = (currentIndex + 1) % tabs.length;
+        break;
+      case "ArrowUp":
+      case "ArrowLeft":
+        event.preventDefault();
+        nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+        break;
+      case "Home":
+        event.preventDefault();
+        nextIndex = 0;
+        break;
+      case "End":
+        event.preventDefault();
+        nextIndex = tabs.length - 1;
+        break;
+      case "Enter":
+      case " ":
+        event.preventDefault();
+        handleTabs(currentIndex);
+        return;
+      default:
+        return;
     }
-  }
 
-  // Получаем первый таб и его индекс для установки начального состояния
-  const initialTab = tabsList.querySelector(".tab");
-  if (initialTab) {
-    const initialTabIndex = Array.from(initialTab.parentElement.children).indexOf(initialTab);
-    // Вызываем функцию для установки начального состояния
-    handleTabs(initialTabIndex);
-  }
+    handleTabs(nextIndex);
+    tabs[nextIndex].focus();
+  });
+
+  handleTabs(0);
 });
-
