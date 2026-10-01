@@ -1,9 +1,9 @@
-<div class="article-list">
+<article class="article-list">
   <div class="article-list__content | grid">
     <picture class="article-list__picture">
       <source srcset="img/article-list-img/@img.webp" type="image/webp">
       <img class="article-list__img" loading="lazy" src="img/article-list-img/@img.jpg" width="336" height="195"
-        alt="images">
+        alt="@title">
     </picture>
     <div class="article-list__info | flex-col-sb">
       <span class="article-list__subtitle">@sub</span>
@@ -12,13 +12,13 @@
       <div class="article-list__reviews | flex-center">
         <span class="article-list__date">@date</span>
         <span class="article-list__comment | flex-center">
-          <svg width="15" height="15">
+          <svg width="15" height="15" aria-hidden="true">
             <use xlink:href="img/svg/sprite.svg#comment"></use>
           </svg>
           <span> @comment</span>
         </span>
         <span class="article-list__favorite | flex-center">
-          <svg width="15" height="15">
+          <svg width="15" height="15" aria-hidden="true">
             <use xlink:href="img/svg/sprite.svg#favorite"></use>
           </svg>
           <span>@favorite</span>
@@ -26,9 +26,9 @@
       </div>
     </div>
     <div class="bookmark">
-      <svg width="20" height="20">
+      <svg width="20" height="20" aria-hidden="true">
         <use xlink:href="img/svg/sprite.svg#bookmark"></use>
       </svg>
     </div>
   </div>
-</div>
+</article>

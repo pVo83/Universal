@@ -1,5 +1,6 @@
-<div class="block">
+<section class="block" aria-labelledby="block-title">
   <div class="container">
+    <h2 class="visually-hidden" id="block-title">Featured stories</h2>
     <div class="block__content | grid">
       <article class="blocks | block__favorite | flex-col-center">
         @include('components/favorite-slider.html')
@@ -12,7 +13,7 @@
             authentic in your interview, experts emphasize</p>
           <a class="btn" href="#">
             Read more
-            <svg width="20" height="20">
+            <svg width="20" height="20" aria-hidden="true">
               <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
             </svg>
           </a>
@@ -35,4 +36,4 @@
       </article>
     </div>
   </div>
-</div>
+</section>

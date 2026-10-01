@@ -1,5 +1,6 @@
-<div class="news">
+<section class="news" aria-labelledby="news-title">
   <div class="container">
+    <h2 class="visually-hidden" id="news-title">Latest news</h2>
     <div class="news__content | grid">
       <article class="card | card_one | flex-col">
         <div class="card__top | card__top_one">
@@ -13,14 +14,14 @@
         <div class="card__bottom | card__bottom_one">
           <div class="autor | autor_one | flex">
             <img class="autor__img" loading="lazy" src="img/news-img/avatar.png" width="30" height="30"
-              alt="autor images">
+              alt="Jessica Miller">
             <div class="autor__info | flex-center">
               <span class="autor__name">Jessica Miller:</span>
               <p class="autor__desc | autor__desc_one">Even as the ride-hailing service’s future remains uncertain,
                 fans still love these artful recreations of one of the most iconic sports cars</p>
             </div>
             <span class="autor__comment | autor__comment_one | flex-center">
-              <svg width="15" height="15">
+              <svg width="15" height="15" aria-hidden="true">
                 <use xlink:href="img/svg/sprite.svg#comment"></use>
               </svg>
               342
@@ -28,7 +29,7 @@
           </div>
         </div>
       </article>
-      <div class="card | card_two">
+      <article class="card | card_two">
         <div class="badge">
           <span class="badge__popular">Popular</span>
         </div>
@@ -39,25 +40,25 @@
           </p>
           <div class="autor | autor_two | flex-center">
             <img class="autor__img" loading="lazy" src="img/news-img/avatar.png" width="45" height="45"
-              alt="autor images">
+              alt="Sarah Jenkins">
             <div class="autor__info | _flex-derect">
               <span class="autor__name | autor__name_white">By Sarah Jenkins</span>
               <div class="autor__reviews | _flex-center">
                 <span class="autor__date | autor__date_white">Sept 26</span>
                 <span class="autor__comment | autor__comment_white | _flex-center">
-                  <img loading="lazy" src="img/svg/comment.svg" width="15" height="15" alt="icon-comment">
+                  <img loading="lazy" src="img/svg/comment.svg" width="15" height="15" alt="">
                   16
                 </span>
                 <span class="autor__favorite | autor__favorite_white | _flex-center">
-                  <img loading="lazy" src="img/svg/favorite.svg" width="17" height="17" alt="icon-favorite">
+                  <img loading="lazy" src="img/svg/favorite.svg" width="17" height="17" alt="">
                   832
                 </span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card | card_three">
+      </article>
+      <article class="card | card_three">
         <div class="comment | flex-col">
           <span class="comment__side">Columns</span>
           <ul class="comment__list | flex-col">
@@ -65,7 +66,7 @@
               <p class="comment__text | decor-quote">Architecture is the thoughtful making of space</p>
               <div class="autor | autor_three | flex-center">
                 <img class="autor__img" loading="lazy" src="img/news-img/avatar1.png" width="45" height="45"
-                  alt="autor images">
+                  alt="David Williams">
                 <div class="autor__info | autor__info_three">
                   <span class="autor__name | botticelli">David Williams</span>
                   <span class="autor__post | botticelli">Architect</span>
@@ -76,7 +77,7 @@
               <p class="comment__text | decor-quote">The details are not the details. They make the design.</p>
               <div class="autor | autor_three | flex-center">
                 <img class="autor__img" loading="lazy" src="img/news-img/avatar2.png" width="45" height="45"
-                  alt="autor images">
+                  alt="Alexandra Green">
                 <div class="autor__info | autor__info_three">
                   <span class="autor__name | botticelli">Alexandra Green</span>
                   <span class="autor__post | botticelli">Interior designer</span>
@@ -87,7 +88,7 @@
               <p class="comment__text | decor-quote">Live life to the fullest, and focus on the positive</p>
               <div class="autor | autor_three | flex-center">
                 <img class="autor__img" loading="lazy" src="img/news-img/avatar3.png" width="45" height="45"
-                  alt="autor images">
+                  alt="Olivia Thompson">
                 <div class="autor__info | autor__info_three">
                   <span class="autor__name | botticelli">Olivia Thompson</span>
                   <span class="autor__post | botticelli">Coacher</span>
@@ -97,11 +98,12 @@
           </ul>
           <a class="comment__side | comment__side_bottom | flex-aj-center" href="#!">Read more</a>
         </div>
-      </div>
+      </article>
       <article class="card | card_four">
         <picture class="card__picture">
           <source srcset="img/news-img/news3.webp" type="image/webp">
-          <img class="card__img" loading="lazy" src="img/news-img/news3.jpg" width="263" height="275" alt="img">
+          <img class="card__img" loading="lazy" src="img/news-img/news3.jpg" width="263" height="275"
+            alt="Rescue volunteers with saved cats">
         </picture>
         <div class="card__content | card__content_four">
           <h4 class="title | title_h4 | title_four">200+ Doomed Cats Saved From Euthanization</h4>
@@ -140,4 +142,4 @@
       </article>
     </div>
   </div>
-</div>
+</section>
