@@ -20,10 +20,11 @@
         </div>
         <!--  -->
         <div class="header__search | flex-center">
-          <form action="#" class="search">
+          <form action="#" class="search" role="search">
             <label class="search__label">
-              <img class="search-icon" loading="lazy" src="img/svg/search.svg" width="20" height="20" alt="search icon">
-              <input type="text" name="Имя" class="input-reset | search__input" placeholder="Search..."
+              <span class="visually-hidden">Search</span>
+              <img class="search-icon" loading="lazy" src="img/svg/search.svg" width="20" height="20" alt="">
+              <input type="search" name="q" class="input-reset | search__input" placeholder="Search..."
                 autocomplete="off">
             </label>
           </form>
